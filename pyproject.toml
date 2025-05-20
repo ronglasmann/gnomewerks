@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gnomewerks"
+authors = [{name = "Ron Glasmann", email = "ron@glasmann.net"}]
+readme = "README.md"
+license = { text = "MIT" }
+dynamic = ["version"]
+dependencies = [
+    "gwerks",
+    "pyyaml"
+]
+
+[project.optional-dependencies]
+
+[project.scripts]
+cnc = "gw.cnc.cli:cnc"
+
+[tool.setuptools]
+license-files = ["LICENSE"]
